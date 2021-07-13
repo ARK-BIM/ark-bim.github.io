@@ -1,12 +1,4 @@
-/*
-Template Name: Me
-Author: One Page Love
-Author URI: https://onepagelove.com
-Template URI: https://onepagelove.com/me
-Description: Me is a slick, personal layout for any individual wanting a minimal online presence. Features include a big background image, logo, bio and icons.
-Version: 0.2.2
-*/
-/* -- CSS Reset -- */
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -77,7 +69,7 @@ body,
 p,
 a,
 a:hover {
-  color: #000000; }
+  color: #141414; }
 
 a,
 a:hover {
@@ -86,7 +78,6 @@ a:hover {
   border-style: none;
   box-shadow: none; }
 
-/* -- Content -- */
 @-webkit-keyframes fadein {
   from {
     opacity: 0; }
@@ -99,23 +90,24 @@ a:hover {
     opacity: 1; } }
 
 html {
-  background-color: #141414; }
+  background-color: #262626; }
 
 body.page-template-page-fullsingle-me {
   height: 100vh;
-  background-color: #141414;
+  background-color: #262626;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 45px;
   line-height: 60px;
   letter-spacing: -0.5px;
-  color: #999999;
+  color: #262626;
   background-image: url("../../images/background.jpg");
   background-position: center center;
-  background-size: cover; }
+  background-size: contain;
+background-repeat: no-repeat; }
   body.page-template-page-fullsingle-me p {
     margin-bottom: 28px;
-    color: #999999; }
+    color: #262626; }
     @media (max-width: 800px) {
       body.page-template-page-fullsingle-me p {
         font-size: 32px;
