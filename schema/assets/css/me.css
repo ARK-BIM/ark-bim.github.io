@@ -104,7 +104,7 @@ body.page-template-page-fullsingle-me {
   background-image: url("../../images/background.jpg");
   background-position: center center;
   background-size: contain;
-background-repeat: no-repeat; }
+  background-repeat: no-repeat; }
   body.page-template-page-fullsingle-me p {
     margin-bottom: 28px;
     color: #262626; }
