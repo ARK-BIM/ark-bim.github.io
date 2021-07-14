@@ -10,108 +10,65 @@ $(function() {
     
     
     //===== Sticky
-
-    $(window).on('scroll', function (event) {
+    
+    $(window).on('scroll', function(event) {    
         var scroll = $(window).scrollTop();
-        if (scroll < 20) {
+        if (scroll < 10) {
             $(".navbar-area").removeClass("sticky");
-            $(".navbar-area img").attr("src", "assets/images/logo.svg");
-        } else {
+        } else{
             $(".navbar-area").addClass("sticky");
-            $(".navbar-area img").attr("src", "assets/images/logo-2.svg");
         }
     });
-
     
-    //===== Section Menu Active
-
-    var scrollLink = $('.page-scroll');
-    // Active link switching
-    $(window).scroll(function () {
-        var scrollbarLocation = $(this).scrollTop();
-
-        scrollLink.each(function () {
-
-            var sectionOffset = $(this.hash).offset().top - 73;
-
-            if (sectionOffset <= scrollbarLocation) {
-                $(this).parent().addClass('active');
-                $(this).parent().siblings().removeClass('active');
-            }
-        });
-    });
+     //===== close navbar-collapse when a  clicked
     
-    
-    //===== close navbar-collapse when a  clicked
-
     $(".navbar-nav a").on('click', function () {
         $(".navbar-collapse").removeClass("show");
     });
-
-    $(".navbar-toggler").on('click', function () {
+    
+    //===== Mobile Menu
+    
+    $(".navbar-toggler").on('click', function(){
         $(this).toggleClass("active");
     });
-
-    $(".navbar-nav a").on('click', function () {
+    
+    $(".navbar-nav a").on('click', function() {
         $(".navbar-toggler").removeClass('active');
     });
     
     
+    //===== Section Menu Active
+
+    var scrollLink = $('.page-scroll');
+        // Active link switching
+        $(window).scroll(function() {
+        var scrollbarLocation = $(this).scrollTop();
+
+        scrollLink.each(function() {
+
+          var sectionOffset = $(this.hash).offset().top - 73;
+
+          if ( sectionOffset <= scrollbarLocation ) {
+            $(this).parent().addClass('active');
+            $(this).parent().siblings().removeClass('active');
+          }
+        });
+    });    
+    
+    
     //===== Sidebar
 
-    $('[href="#side-menu-left"], .overlay-left').on('click', function (event) {
-        $('.sidebar-left, .overlay-left').addClass('open');
+    $('[href="#side-menu-right"], .overlay-right').on('click', function (event) {
+        $('.sidebar-right, .overlay-right').addClass('open');
     });
 
-    $('[href="#close"], .overlay-left').on('click', function (event) {
-        $('.sidebar-left, .overlay-left').removeClass('open');
+    $('[href="#close"], .overlay-right').on('click', function (event) {
+        $('.sidebar-right, .overlay-right').removeClass('open');
     });
     
     
-    //===== Slick
-
-    $('.slider-items-active').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        speed: 800,
-        arrows: true,
-        prevArrow: '<span class="prev"><i class="lni lni-arrow-left"></i></span>',
-        nextArrow: '<span class="next"><i class="lni lni-arrow-right"></i></span>',
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                    arrows: false,
-                }
-            }
-        ]
-    });
     
-    
-    //===== Isotope Project 4
+    //===== Isotope Project 3
 
     $('.container').imagesLoaded(function () {
         var $grid = $('.grid').isotope({
@@ -136,39 +93,186 @@ $(function() {
     });
     
     
-    //===== slick Testimonial Four
-    
-    $('.testimonial-active').slick({
-        dots: false,
-        arrows: true,
-        prevArrow: '<span class="prev"><i class="lni lni-arrow-left"></i></span>',
-        nextArrow: '<span class="next"><i class="lni lni-arrow-right"></i></span>',
-        infinite: true,
-       autoplay: true,
-        autoplaySpeed: 5000,
-        speed: 800,
-        slidesToShow: 1,
+    //  Magnific Popup
+
+    $('.image-popup').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
     });
     
-    
     //====== Magnific Popup
-    
+
     $('.video-popup').magnificPopup({
         type: 'iframe'
         // other options
     });
     
     
-    //===== Magnific Popup
-    
-    $('.image-popup').magnificPopup({
-      type: 'image',
-      gallery:{
-        enabled:true
-      }
+    //===== Slick
+
+    $('.testimonial-active').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 800,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                }
+            }
+        ]
     });
     
     
+    //===== Slick
+
+    $('.testimonial-active-2').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        speed: 800,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                }
+            }
+        ]
+    });
+    
+    
+    //===== Slick
+
+    $('.client-active').slick({
+        infinite: true,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        speed: 800,
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 6,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 5,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false,
+                }
+            }
+        ]
+    });
+    
+    
+    //===== Slick
+
+    $('.testimonial-active-4').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        speed: 800,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                }
+            }
+        ]
+    });
+
+        
     //===== Back to top
     
     // Show or hide the sticky footer button
@@ -189,6 +293,11 @@ $(function() {
             scrollTop: 0,
         }, 1500);
     });
+    
+    
+    //=====  AOS
+    
+    new WOW().init();
     
     
     //===== 
