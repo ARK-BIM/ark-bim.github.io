@@ -83,7 +83,7 @@ define('EMAIL_TO_CC_NAME', '');
 define('EMAIL_TO_BCC', '');
 define('EMAIL_TO_BCC_NAME', '');
 
-define('EMAIL_FROM', '');
+define('EMAIL_FROM', 'arkbim.info@gmail.com');
 define('EMAIL_FROM_NAME', '');
 
 define('EMAIL_REPLY_TO', 'FIELD:Email');
