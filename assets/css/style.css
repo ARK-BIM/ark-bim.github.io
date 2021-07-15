@@ -601,7 +601,7 @@ p {
     .navbar-area .navbar .navbar-toggler .toggler-icon {
       width: 30px;
       height: 2px;
-      background-color: #121212;
+      background-color: white;
       margin: 5px 0;
       display: block;
       position: relative;
@@ -632,7 +632,7 @@ p {
         top: 108%;
         left: 0;
         width: 100%;
-        background-color: #f4f6f7;
+        background-color: #303030;
         z-index: 8;
         padding: 10px 16px;
         -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -2240,7 +2240,7 @@ p {
 /*===== BACK TO TOP =====*/
 .back-to-top {
   font-size: 20px;
-  color: #121212;
+  color: white;
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -2248,7 +2248,7 @@ p {
   height: 45px;
   line-height: 45px;
   border-radius: 50%;
-  background-color: #38f9d7;
+  background-color: #303030;
   text-align: center;
   z-index: 99;
   -webkit-transition: all 0.3s ease-out 0s;
