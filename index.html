@@ -38,15 +38,16 @@
 #fs-frm optgroup,
 #fs-frm label,
 #fs-frm #card-element:disabled {
-  font-family: inherit;
+  font-family: poppins;
   font-size: 100%;
   color: inherit;
   border: none;
   border-radius: 0;
   display: block;
-  width: 100%;
+  width: 150%;
   padding: 0;
-  margin: 0;
+  margin-left: 10px;
+  margin-top: 20px;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -65,7 +66,7 @@
 #fs-frm select,
 #fs-frm textarea,
 #fs-frm #card-element {
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(43,169,166);
   background-color: rgba(255,255,255,0.9);
   padding: .75em 1rem;
   margin-bottom: 1.5rem;
@@ -81,7 +82,8 @@
 }
 #fs-frm [type="text"],
 #fs-frm [type="email"] {
-  width: 100%;
+  width: 150%;
+    margin-left: 10px;
 }
 #fs-frm [type="button"],
 #fs-frm [type="submit"],
@@ -99,7 +101,7 @@
 }
 #fs-frm [type="submit"],
 #fs-frm [type="reset"] {
-  margin-bottom: 0;
+  margin-left: 20px;
 }
 #fs-frm select {
   text-transform: none;
@@ -589,23 +591,22 @@
                         <ul class="contact-info">
                             <li></i> arkbim.info@gmail.com</li>
                         </ul>
-                    </div> 
-					
-<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mgerlypo" method="post">
+                    </div> 			
+    </div>
+	&nbsp
+	&nbsp
+  <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mgerlypo" method="post">
   <fieldset id="fs-frm-inputs">
-    <label for="full-name">Full Name</label>
-    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-    <label for="email-address">Email Address</label>
-    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+    <label for="full-name">Name</label>
+    <input type="text" name="name" id="full-name" placeholder="Your full name" required="">
+    <label for="email-address">Email</label>
+    <input type="email" name="_replyto" id="email-address" placeholder="Your email address" required="">
     <label for="message">Message</label>
-    <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+    <textarea rows="5" name="message" id="message" placeholder="Write here your message" required=""></textarea>
     <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
   </fieldset>
   <input type="submit" value="Submit">
-</form>
-
-    </div>
-				
+</form>	
             </div>
             </div> 
         </div> 
