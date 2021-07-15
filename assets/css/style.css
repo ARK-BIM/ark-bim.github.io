@@ -1069,7 +1069,7 @@ p {
 .slider-area {
   padding-top: 94px; }
   .slider-area .bd-example .carousel .carousel-inner {
-    background-color: #38f9d7; }
+    background-color: white; }
     .slider-area .bd-example .carousel .carousel-inner .carousel-item {
       height: 700px; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
