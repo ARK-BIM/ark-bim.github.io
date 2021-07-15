@@ -30,7 +30,24 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
 
-<style>/* reset */
+<style>
+
+a {
+  color: #303030;
+  /* First we need to help some browsers along for this to work.
+     Just because a vendor prefix is there, doesn't mean it will
+     work in a browser made by that vendor either, it's just for
+     future-proofing purposes I guess. */
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+a:hover { color: #57a2b8; }
+
+/* reset */
 #fs-frm input,
 #fs-frm select,
 #fs-frm textarea,
@@ -104,12 +121,15 @@
   margin-left: 20px;
   transition: 0.3s;
 }
+
+
 #fs-frm [type="button"]:hover,
 #fs-frm [type="submit"]:hover,
 #fs-frm [type="reset"]:hover {
   background-color: #57a2b8;
   color: white;
 }
+
 #fs-frm select {
   text-transform: none;
 }
@@ -329,9 +349,9 @@
 					    <div class="section-title text-center pb-10"> 
 						&nbsp;
 						<p style="font-size: 16px">ARK-BIM requires a BIMData account for hosting IFC models, then through access and project tokens you can use your models. More info on
-                        <a class="text" href="https://bimdata.io" style="font-size: 16px">BIMData.io</a>
+                        <a href="https://bimdata.io" style="font-size: 16px">BIMData.io</a>
 						</p>
-                        <a class="text" href="schema/index.html" style="font-size: 18px">ARK-BIM framework</a>
+                        <a href="schema/index.html" style="font-size: 18px">ARK-BIM framework</a>
                     </div> 
 
 
@@ -516,9 +536,9 @@
 					    <div class="section-title text-center pb-10"> 
 						&nbsp;
 						<p>BIMData 0.8.26 JavaScript main viewer
-                        <a class="text" href="https://unpkg.com/@bimdata/viewer@0.8.26/dist/bimdata-viewer.min.js" style="font-size: 15px"> Download here</a>
+                        <a href="https://unpkg.com/@bimdata/viewer@0.8.26/dist/bimdata-viewer.min.js" style="font-size: 15px"> Download here</a>
 						<a> or</a>
-						<a class="text" href="https://drive.google.com/uc?export=view&id=1PTrPaD4UBWfMy76rQTu2ipkl7CDdGuiN" style="font-size: 15px"> here</a>
+						<a href="https://drive.google.com/uc?export=view&id=1PTrPaD4UBWfMy76rQTu2ipkl7CDdGuiN" style="font-size: 15px"> here</a>
 						</p>
                     </div> 
         </div> 
@@ -588,7 +608,11 @@
                     <div class="contact-two mt-50 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
                         <h4 class="contact-title">Questions about ARK-BIM?</h4>
                         <p style="text-align: justify"class="text">
-						ARK-BIM is a research project carried out by Filippo Diara of Politecnico di Torino, DAD department - G4CH Lab. This work was inspired by the guidelines of the International Committee of Architectural Photogrammetry (CIPA), 
+						ARK-BIM is a research project carried out by 
+						<a href="https://www.dad.polito.it/personale/scheda/(nominativo)/filippo.diara">Filippo Diara</a> 
+						of Politecnico di Torino, DAD department - 
+						<a href="https://www.g4ch.polito.it/">G4CH Lab</a>
+						. This work was inspired by the guidelines of the International Committee of Architectural Photogrammetry (CIPA), 
 						the scientific committee of ICOMOS, concerning Cultural Heritage documentation and preservation through the utilization 
 						of open source solutions for the correct data dissemination, idea also adopted by the GAMHer project (PRIN 2015-2020), 
 						who supported and shared this thought. 
